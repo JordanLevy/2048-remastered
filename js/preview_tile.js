@@ -25,7 +25,9 @@ class PreviewTile {
       var prob = 0;
       var found = false;
       for(var i = numPossibleTiles - 2; i >= 0; i--){
+      //for(var i = 0; i <= numPossibleTiles - 2; i++){
         prob = 0.4*Math.exp(k*i);
+        //console.log(Math.pow(2, i+2), prob);
         if(rand <= prob){
           value = Math.pow(2, i+2);
           found = true;
@@ -37,15 +39,15 @@ class PreviewTile {
       }
     }
 
-    //5% chance extralife, 10% chance explosion, 85% chance regular
+    //8% chance extralife, 8% chance explosion, 8% chance trim, 68% chance regular
     rand = Math.random();
-    if(rand <= 0.05){
+    if(rand <= 0.08){
       type = TileTypes.ExtraLife;
     }
-    else if(rand <= 0.10){
+    else if(rand <= 0.16){
       type = TileTypes.Explode;
     }
-    else if(rand <= 0.15){
+    else if(rand <= 0.24){
       type = TileTypes.Trim;
     }
     else{

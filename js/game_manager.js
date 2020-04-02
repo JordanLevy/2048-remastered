@@ -375,15 +375,4 @@ class GameManager {
   static positionsEqual(first, second) {
     return first.x === second.x && first.y === second.y;
   }
-  
-  static explode(x, y) {
-    for (var i = 0; i < GameManager.size; i++) {
-      for (var j = 0; j < GameManager.size; j++) {
-        if(Math.abs(i - x) < 2 && Math.abs(j - y) < 2 && GameManager.grid.cells[i][j] != null) {
-          GameManager.grid.removeTile(GameManager.grid.cells[i][j]);
-        }
-      }
-    }
-    GameManager.actuate();
-  }
 }

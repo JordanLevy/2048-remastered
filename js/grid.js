@@ -18,6 +18,17 @@ Grid.prototype.empty = function () {
   return cells;
 };
 
+Grid.prototype.isEmpty = function() {
+  for (var x = 0; x < this.size; x++) {
+    for (var y = 0; y < this.size; y++) {
+      if(this.cells[x][y]){
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
 Grid.prototype.fromState = function (state) {
   var cells = [];
 

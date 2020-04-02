@@ -30,6 +30,9 @@ function useItem() {
         }
       }
     }
+    if(GameManager.grid.isEmpty()){
+      PreviewTile.addPreviewTile();
+    }
     GameManager.actuate();
     ItemSlot.setItem(ItemTypes.None);
     break;

@@ -30,3 +30,21 @@ class HoldTile {
     GameManager.actuator.clearHoldTile();
   }
 }
+
+function hold() {
+  if(GameManager.gridClickEvent == Events.Hold){
+    GameManager.gridClickEvent = Events.None;
+  }
+  else{
+    if(HoldTile.value == 0){
+      HoldTile.hold();
+      lastHoldTurn = GameManager.turns;
+      GameManager.gridClickEvent = Events.None;
+    }
+    else{
+      if(lastHoldTurn != -1 && GameManager.turns - lastHoldTurn >= 3) {
+        GameManager.gridClickEvent = Events.Hold;
+      }
+    }
+  }
+}
