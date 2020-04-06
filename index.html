@@ -74,15 +74,23 @@
 
   <div class="container">
     <p class="game-explanation">
-      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong> You win if you make a tile with the value <strong>2048</strong>. You lose if the board gets full and you have no more valid moves.
+      <br>
+      <strong class="important">Board Size:</strong> You can set the dimensions of the board by entering a number from 3-10 in the <strong>Board Size</strong> text box and clicking <strong>Submit</strong>.
+      <br>
+      <strong class="important">Extra Life<img src="assets/ExtraLife.png" class="icon"/>:</strong> Merge two <strong>extra life tiles</strong> to gain an extra life. In case you lose, a life will automatically be spent to clear some of the board and you will be able to continue the game.
+      <br>
+      <strong class="important">Explode<img src="assets/Explosion.png" class="icon"/>:</strong> Merge two <strong>explode tiles</strong> to get a bomb item. Click on the bomb item, then click anywehere on the board to explode a 3x3 area of tiles.
+      <br>
+      <strong class="important">Trim<img src="assets/Trim.png" class="icon"/>:</strong> Merge two <strong>trim tiles</strong> to get a trim item. Click on the trim item to remove all tiles with values of 2 or 4 from the board.
+      <br>
+      <strong class="important">Next Tile:</strong> Each turn, you are shown a preview of the next tile that will be added to the board after you make your next move.
+      <br>
+      <strong class="important">Held Tile:</strong> Click <strong>Hold</strong> to save the <strong>Next Tile</strong> for later.  After waiting at least 3 turns, you can click <strong>Hold</strong>, then click anywhere on the board to play the held tile onto the board.
     </p>
     <hr>
     <p>
-    <strong class="important">Note:</strong> This site is the official version of 2048. You can play it on your phone via <a href="http://git.io/2048">http://git.io/2048.</a> All other apps or sites are derivatives or fakes, and should be used with caution.
-    </p>
-    <hr>
-    <p>
-    Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
+    This site is made by <a href="https://gitlab.cas.mcmaster.ca/kavisina/banana-hammocks-2048" target="_blank">Akila Kavisinghe, Hassan Jasim, and Jordan Levy</a> for the McMaster University SFWRENG 3XA3 course. Based on <a href="http://gabrielecirulli.com" target="_blank">2048 by Gabriele Cirulli</a>.
     </p>
   </div>
   <script src="js/bind_polyfill.js"></script>
